@@ -1,42 +1,84 @@
-# Nexus Ponto — MVP
+# 🕒 Nexus Ponto — MVP
 
-Primeira versão funcional do aplicativo de ponto.
+> Primeira versão funcional do aplicativo web para registro e controle de ponto eletrônico em tempo real.
 
-## Recursos incluídos
+---
 
-- Alternância entre visão do funcionário e da empresa
-- Registro sequencial de entrada, intervalo, retorno e saída
-- Horário obtido pelo navegador
-- Histórico diário
-- Identificação simples de atraso na entrada após 08:05
-- Notificação do funcionário ao registrar
-- Painel da empresa atualizado em tempo real entre abas
-- Notificações do navegador e lembrete periódico de demonstração
-- Persistência local com localStorage
+## 📌 Sobre o Projeto
 
-## Como executar no Windows
+O **Nexus Ponto** é uma solução leve e moderna desenvolvida para simplificar a jornada de registro de ponto de funcionários e o acompanhamento por parte da empresa. 
 
-1. Instale o Node.js.
-2. Extraia esta pasta.
-3. Abra o terminal dentro da pasta.
-4. Execute:
+Nesta versão inicial (**MVP**), a aplicação opera inteiramente no navegador utilizando **persistência local (`localStorage`)** e **sincronização reativa entre abas**, permitindo testar o fluxo de ponta a ponta sem a necessidade imediata de um banco de dados externo.
 
-```bash
+---
+
+## ✨ Recursos Incluídos
+
+* **👥 Visão Dupla:** Alternância simplificada entre o perfil do **Funcionário** e a gestão da **Empresa**.
+* **⏱️ Marcação Sequencial:** Controle do fluxo obrigatório de batidas (*Entrada* ➔ *Intervalo* ➔ *Retorno* ➔ *Saída*).
+* **⚠️ Detecção Automática de Atrasos:** Identificação visual imediata de atrasos para entradas registradas após as **08:05**.
+* **⚡ Dashboard em Tempo Real:** O painel da empresa reflete novos registros de ponto instantaneamente entre abas abertas no navegador.
+* **🔔 Notificações Nativas:** Suporte a notificações de navegador no registro e lembretes periódicos de demonstração.
+* **💾 Persistência Local:** Histórico diário salvo via `localStorage`.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Runtime & Tooling:** [Node.js](https://nodejs.org/) & [Vite](https://vitejs.dev/)
+* **Linguagem & Interface:** HTML5, CSS3, JavaScript / Web APIs
+* **Web APIs Nativas:**
+  * `localStorage` — Persistência local de dados
+  * `StorageEvent` — Comunicação e sincronização reativa entre abas
+  * `Notification API` — Emissão de notificações no sistema operacional
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+
+Certifique-se de ter o **[Node.js](https://nodejs.org/)** instalado em sua máquina.
+
+### Passo a Passo
+
+1. **Clone ou extraia** o projeto em sua máquina:
+   ```bash
+   git clone [https://github.com/seu-usuario/nexus-ponto.git](https://github.com/seu-usuario/nexus-ponto.git)
+   cd nexus-ponto
+
+
+Instale as dependências:
+
+Bash
 npm install
+
+Inicie o servidor de desenvolvimento:
+
+Bash
 npm run dev
-```
 
-5. Abra o endereço mostrado no terminal, normalmente `http://localhost:5173`.
+Acesse no navegador:
+Abra o endereço indicado no terminal (habitualmente http://localhost:5173).
 
-## Como testar a notificação da empresa
+🧪 Como Testar a Sincronização em Tempo Real
+Abra o aplicativo em duas abas distintas do mesmo navegador.
 
-1. Abra o aplicativo em duas abas.
-2. Na primeira aba, selecione **Funcionário**.
-3. Na segunda, selecione **Empresa**.
-4. Ative as notificações nas duas abas.
-5. Registre um ponto na aba do funcionário.
-6. O painel da empresa será atualizado automaticamente.
+Na Aba 1, selecione o perfil Funcionário e ative as notificações.
 
-## Próxima etapa
+Na Aba 2, selecione o perfil Empresa e ative as notificações.
 
-Substituir o armazenamento local por backend Java Spring Boot e PostgreSQL, adicionar login, empresas, funcionários e notificações push reais.
+Registre um ponto na Aba 1.
+
+Observe o painel da Aba 2 atualizar automaticamente em tempo real!
+
+🎯 Próximos Passos (Roadmap)
+Nas próximas etapas de desenvolvimento do Nexus Ponto, o projeto receberá uma evolução completa de arquitetura:
+
+[ ] Backend Robust: Implementação de API REST com Java Spring Boot.
+
+[ ] Banco de Dados Relacional: Substituição do localStorage pelo PostgreSQL.
+
+[ ] Gestão de Acesso: Autenticação segura (JWT) para usuários, empresas e funcionários.
+
+[ ] Push Notifications: Alertas ativos enviados diretamente pelo servidor em tempo real
