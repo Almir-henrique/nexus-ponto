@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+﻿node_modules/
+.env
+dist/
+=======
+
+node_modules/
+Backend/node_modules/
+>>>>>>> 5b871eb (feat: adiciona backend ao repositorio)

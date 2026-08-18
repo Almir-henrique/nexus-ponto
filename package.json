@@ -1,0 +1,30 @@
+{
+  "name": "nexus-ponto-mvp",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+<<<<<<< HEAD
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "socket.io-client": "^4.8.3",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+=======
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest"
+  },
+  "devDependencies": {}
+>>>>>>> 5b871eb (feat: adiciona backend ao repositorio)
+}
