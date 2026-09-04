@@ -26,19 +26,19 @@ justificativaRoutes.post(
 );
 
 justificativaRoutes.get(
-  "/funcionarios/:funcionarioID" ,
+  "/funcionarios/:funcionarioId",
   autenticar,
   listarJustificativasDoFuncionario
 );
 
 justificativaRoutes.get(
-  "/empresas/:empresaID" , 
+  "/empresas/:empresaId",
   autenticar,
   listarJustificativasDaEmpresa
 );
 
 justificativaRoutes.get(
-  "/:id/anexo",
+  "/id/:id/anexo",
   autenticar,
   baixarAnexoJustificativa
 );
